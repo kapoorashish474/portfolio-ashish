@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-ashish/static/css/main.62d83dbf.css",
-    "main.js": "/portfolio-ashish/static/js/main.66590fc7.js",
+    "main.js": "/portfolio-ashish/static/js/main.376101de.js",
     "static/js/453.bcf46b75.chunk.js": "/portfolio-ashish/static/js/453.bcf46b75.chunk.js",
     "static/media/Ashish.jpg": "/portfolio-ashish/static/media/Ashish.c19db946deb2cb29c87c.jpg",
     "static/media/Thumbs.db": "/portfolio-ashish/static/media/Thumbs.735170b30af6b4c4247f.db",
@@ -9,24 +9,21 @@
     "static/media/stars.png": "/portfolio-ashish/static/media/stars.90c266f7d69f1ffb6137.png",
     "static/media/clouds.png": "/portfolio-ashish/static/media/clouds.655c9c060e6309ec9edf.png",
     "static/media/cloud.png": "/portfolio-ashish/static/media/cloud.46501fa09b8520e80774.png",
-    "static/media/Kelloggs.svg": "/portfolio-ashish/static/media/Kelloggs.924a5952a61c24070750.svg",
-    "static/media/kelloggslogo.png": "/portfolio-ashish/static/media/kelloggslogo.924a5952a61c24070750.png",
     "static/media/kelloggslogo.svg": "/portfolio-ashish/static/media/kelloggslogo.924a5952a61c24070750.svg",
     "static/media/Ash-Resume.pdf": "/portfolio-ashish/static/media/Ash-Resume.942dbd18b2d416a7e65e.pdf",
     "static/media/pmi.png": "/portfolio-ashish/static/media/pmi.a2dcab7f32291bd05164.png",
     "static/media/pmi.svg": "/portfolio-ashish/static/media/pmi.a2dcab7f32291bd05164.svg",
-    "static/media/kelloggs.png": "/portfolio-ashish/static/media/kelloggs.1c503d532b8b4bd21e54.png",
     "static/media/rainbows.jpg": "/portfolio-ashish/static/media/rainbows.0984650e39d68898b2ba.jpg",
     "static/media/rainbow.jpg": "/portfolio-ashish/static/media/rainbow.3f1db689a9060222aad7.jpg",
     "static/media/pmi1.png": "/portfolio-ashish/static/media/pmi1.d7f80d71444c04426328.png",
     "static/media/Barminco.svg": "/portfolio-ashish/static/media/Barminco.a8cb5a37d96670552aee.svg",
     "index.html": "/portfolio-ashish/index.html",
     "main.62d83dbf.css.map": "/portfolio-ashish/static/css/main.62d83dbf.css.map",
-    "main.66590fc7.js.map": "/portfolio-ashish/static/js/main.66590fc7.js.map",
+    "main.376101de.js.map": "/portfolio-ashish/static/js/main.376101de.js.map",
     "453.bcf46b75.chunk.js.map": "/portfolio-ashish/static/js/453.bcf46b75.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.62d83dbf.css",
-    "static/js/main.66590fc7.js"
+    "static/js/main.376101de.js"
   ]
 }
