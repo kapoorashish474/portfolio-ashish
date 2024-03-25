@@ -1,0 +1,24 @@
+.test {
+  -webkit-animation: anim 3s infinite;
+  animation: anim 3s infinite;
+  margin : auto;
+}
+
+@-webkit-keyframes anim {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+@keyframes anim {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
