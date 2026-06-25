@@ -65,6 +65,21 @@ main,
   color: var(--black);
 }
 
+.section-subtitle {
+  text-align: center;
+  max-width: 56rem;
+  margin: -1.5rem auto 3.5rem;
+  font-size: 1.7rem;
+  line-height: 1.7;
+  color: var(--light-color);
+  text-transform: none;
+}
+
+#leadership + .sobre-mi .heading,
+.leadership-section + .sobre-mi .heading {
+  margin-top: 3rem;
+}
+
 .service-page .heading {
   margin-top: 7rem;
 }

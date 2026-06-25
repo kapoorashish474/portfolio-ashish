@@ -1,0 +1,182 @@
+.leadership-section {
+  margin: 0 0 4rem;
+}
+
+.leadership-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 3rem;
+  color: #f8fafc;
+  text-align: center;
+}
+
+.leadership-eyebrow {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #93c5fd;
+  margin-bottom: 1rem;
+}
+
+.leadership-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  max-width: 64rem;
+  margin: 0 auto 3rem;
+  text-transform: none;
+  color: #f8fafc;
+}
+
+.leadership-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 3rem;
+}
+
+.leadership-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 10rem;
+}
+
+.leadership-stat__value {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.leadership-stat__label {
+  font-size: 1.3rem;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+  text-transform: none;
+}
+
+.leadership-points {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+}
+
+.leadership-points li {
+  font-size: 1.55rem;
+  line-height: 1.65;
+  color: var(--light-color-white);
+  padding: 1.4rem 1.6rem 1.4rem 2.4rem;
+  background: var(--surface);
+  border: var(--borde);
+  border-radius: var(--radius-md);
+  position: relative;
+  text-transform: none;
+}
+
+.leadership-points li::before {
+  content: '';
+  position: absolute;
+  left: 1.2rem;
+  top: 1.8rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--purple);
+}
+
+body.dark .leadership-points li {
+  background: var(--surface-dark);
+  border-color: var(--border-dark);
+  color: #cbd5e1;
+}
+
+.certifications {
+  margin-top: 3rem;
+}
+
+.certifications__heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--light-color);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.certifications__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.8rem;
+  background: var(--surface);
+  border: var(--borde);
+  border-radius: var(--radius-md);
+  min-width: 32rem;
+}
+
+.cert-badge__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  background: var(--tertiary);
+  color: var(--purple);
+  font-size: 1.6rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.cert-badge__name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--black);
+  text-transform: none;
+  line-height: 1.4;
+}
+
+.cert-badge__meta {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  text-transform: none;
+  margin-top: 0.2rem;
+}
+
+body.dark .cert-badge {
+  background: var(--surface-dark);
+  border-color: var(--border-dark);
+}
+
+body.dark .cert-badge__name {
+  color: #f1f5f9;
+}
+
+body.dark .cert-badge__icon {
+  background: rgba(37, 99, 235, 0.15);
+}
+
+@media (max-width: 570px) {
+  .leadership-banner {
+    padding: 2.5rem 1.6rem;
+  }
+  .leadership-title {
+    font-size: 2.2rem;
+  }
+  .leadership-stats {
+    gap: 1.5rem;
+  }
+}

@@ -24,6 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "preview": "npm run build && rm -rf .preview/portfolio-ashish && cp -r build .preview/portfolio-ashish && npx serve -l 9092 .preview",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
