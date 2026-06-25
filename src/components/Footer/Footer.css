@@ -1,9 +1,6 @@
-/********************** Footer **********************/
-
 .footer {
   background: var(--white);
-  border-top: 3px solid #f1f1f1ee;
-  box-shadow: var(--box-shadow);
+  border-top: 1px solid #e4e9ed;
   padding: 2rem 8%;
 }
 
@@ -15,6 +12,7 @@
 .site-footer .copyright {
   font-size: 1.5rem;
   padding: 2rem 0;
+  color: var(--light-color);
 }
 
 .redes-sociales {
@@ -22,9 +20,14 @@
 }
 
 .redes-sociales a {
-  font-size: 3rem;
-  padding-left: 4rem;
-  color: var(--black);
+  font-size: 2.4rem;
+  padding-left: 3rem;
+  color: var(--light-color);
+  transition: color 0.2s ease;
+}
+
+.redes-sociales a:hover {
+  color: var(--purple);
 }
 
 .titulo .redes-sociales a {
@@ -42,8 +45,7 @@
   }
 
   .site-footer .redes-sociales a {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     padding-left: 2rem;
-    color: var(--black);
   }
 }

@@ -1,19 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap");
 
 :root {
-  --purple: #a178ff;
-  --secondary: #9063fa;
-  --tertiary: #c6aeff;
-  --black: #121f41;
-  --light-color: #788e9c;
-  --light-color-white: #353e44;
-  --white: #fff;
+  /* Primary — clean blue-slate (kept as --purple for legacy CSS vars) */
+  --purple: #2563eb;
+  --secondary: #93c5fd;
+  --tertiary: #eff6ff;
+  --accent: #0891b2;
+  --accent-dark: #0e7490;
+  --ai-bg: #f0fdfa;
+  --black: #0f172a;
+  --light-color: #64748b;
+  --light-color-white: #475569;
+  --white: #ffffff;
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-dark: #1e293b;
+  --border-dark: #334155;
 
-  --borde: 0.1rem solid rgba(0, 0, 0, 0.1);
-  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  --borde: 0.1rem solid #e2e8f0;
+  --box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --box-shadow-hover: 0 8px 30px rgba(37, 99, 235, 0.1);
 
   --borde-claro: 0.1rem solid rgba(255, 255, 255, 0.1);
-  --box-shadow-claro: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.1);
+  --radius-sm: 0.8rem;
+  --radius-md: 1.2rem;
+  --radius-lg: 1.6rem;
 }
 
 * {
@@ -23,14 +34,19 @@
   border: none;
   text-decoration: none;
   text-transform: capitalize;
-  transition: all 0.2s linear;
 }
 
 html {
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.light {
+  background: var(--bg);
+  color: var(--black);
 }
 
 main,
@@ -39,76 +55,13 @@ main,
   overflow: hidden !important;
 }
 
-.loading-pag {
-  text-align: center;
-  background: rgb(14, 12, 12);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-}
-
-.loader {
-  position: relative;
-}
-
-.loader span {
-  position: absolute;
-  color: #fff;
-  transform: translate(-50%, -50%);
-  font-size: 7rem;
-  letter-spacing: 5px;
-  white-space: pre;
-}
-
-.loader span:nth-child(1) {
-  color: transparent;
-  -webkit-text-stroke: 0.3px var(--purple);
-}
-
-.loader span:nth-child(2) {
-  color: var(--purple);
-  -webkit-text-stroke: 1px var(--purple);
-  animation: nahuel61920 3s ease-in-out infinite;
-}
-
-@keyframes nahuel61920 {
-  0%,
-  100% {
-    clip-path: polygon(
-      0% 45%,
-      15% 44%,
-      32% 50%,
-      74% 60%,
-      70% 61%,
-      84% 59%,
-      100% 52%,
-      100% 100%,
-      0% 100%
-    );
-  }
-
-  50% {
-    clip-path: polygon(
-      0% 60%,
-      16% 65%,
-      34% 66%,
-      51% 62%,
-      67% 50%,
-      84% 45%,
-      100% 46%,
-      100% 100%,
-      0% 100%
-    );
-  }
-}
-
 .heading {
   text-align: center;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   margin-top: 5rem;
-  font-size: 4.5rem;
+  font-size: 3.4rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   color: var(--black);
 }
 
@@ -116,89 +69,60 @@ main,
   margin-top: 7rem;
 }
 
-/**botones**/
-
 .custom-btn {
   text-align: center;
-  justify-items: center;
   max-width: 18rem;
   height: 4rem;
   color: #fff;
-  border-radius: 5px;
-  border: 2px solid rgba(0, 0, 0, 0);
-  padding: 0.8rem 2rem 0.2rem 2rem;
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 2rem 0.2rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
+  transition: background 0.2s ease, transform 0.15s ease;
   display: inline-block;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
-}
-
-body.dark .custom-btn {
-  box-shadow: none;
 }
 
 .btn {
   background: var(--purple);
-  color: var(--black);
-  z-index: 1;
-  font-size: 1.7rem;
-  font-weight: 700;
-}
-.btn:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 100%;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  background-color: var(--tertiary);
-  border-radius: 5px;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  transition: all 0.6s ease;
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
-body.dark .btn::after {
-  box-shadow: none;
-}
-
-.btn:hover:after {
-  left: 0;
-  width: 100%;
-}
-.btn:active {
-  top: 2px;
+.btn:hover {
+  background: #1d4ed8;
 }
 
 .btn-codigo {
   max-width: 18rem;
   height: 4rem;
-  border-radius: 0.5rem;
-  border: 2px solid var(--black);
+  border-radius: var(--radius-sm);
+  border: var(--borde);
   color: var(--black);
-  font-size: 1.7rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 500;
   cursor: pointer;
-  background: transparent;
+  background: var(--white);
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .btn-codigo:hover {
-  background: var(--black);
-  color: var(--white);
+  background: var(--tertiary);
+  border-color: var(--purple);
 }
 
 .cv {
   text-align: center;
-  padding: 0.8rem 2rem 0.2rem 2rem;
-  border: 2px solid var(--white);
+  padding: 0.8rem 2rem 0.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   color: var(--white);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.1);
 }
 
-/********************** Particles **********************/
+.cv:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
 
 .particles-css {
   height: 100vh;
@@ -216,8 +140,6 @@ body.dark .btn::after {
   z-index: 1 !important;
 }
 
-/********************** Media Q **********************/
-
 @media (max-width: 990px) {
   html {
     font-size: 55%;
@@ -231,12 +153,7 @@ body.dark .btn::after {
   html {
     font-size: 50%;
   }
-
   main {
     padding: 2rem 5%;
-  }
-
-  .loader span {
-    font-size: 3rem;
   }
 }

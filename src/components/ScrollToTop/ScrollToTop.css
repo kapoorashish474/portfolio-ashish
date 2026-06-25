@@ -12,7 +12,7 @@
 }
 
 .cm-icon {
-  background: var(--black);
+  background: var(--purple);
   color: var(--white);
   font-size: 20px;
   float: right;
@@ -22,11 +22,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.4s;
+  transition: opacity 0.2s ease;
 }
 
 .cm-up:hover {
-  transform: scale(1.1);
+  transform: none;
+}
+
+.cm-up:hover .cm-icon {
+  opacity: 0.85;
 }
 
 /********** MQ **************/

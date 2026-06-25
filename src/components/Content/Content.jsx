@@ -27,10 +27,10 @@ const Content = () => (
                         defaultMessage='My name is Ashish'
                     />
                 </h1>
-                <p data-aos="fade-up" data-aos-delay="1000">
+                <p className="hero-role" data-aos="fade-up" data-aos-delay="1000">
                     <FormattedMessage
                         id='rol'
-                        defaultMessage='I am a Full-stack developer'
+                        defaultMessage='Senior Software Engineer · AI & Cloud'
                     />
                 </p>
 

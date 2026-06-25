@@ -62,7 +62,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--black);
+  background: var(--purple);
 }
 
 .portafolio-btn {
@@ -197,10 +197,11 @@
 
 .contenedor-modal {
   max-width: 700px;
-  background: #fff;
+  background: var(--surface-elevated);
   position: relative;
-  border-radius: 5px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: var(--radius-md);
+  border: var(--borde);
+  box-shadow: var(--box-shadow-hover);
   padding: 20px;
   margin: 5rem 2rem 0 0;
 }

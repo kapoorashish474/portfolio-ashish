@@ -1,26 +1,29 @@
-/********************** header **********************/
-
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: var(--borde);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 8%;
+  padding: 1.4rem 8%;
 }
 
 .site-header .logo {
-  font-family: "Bebas Neue", cursive;
-  font-size: 2.6rem;
-  color: rgb(231, 13, 13);
+  font-family: "DM Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.02em;
 }
 
 .site-header .logo span {
-  color: #000;
+  color: var(--purple);
 }
 
 .navbar {
@@ -29,11 +32,35 @@
 }
 
 .navbar a {
-  font-size: 1.7rem;
-  font-weight: bold;
-  margin: 0 3rem 0 0;
-  color: var(--black);
+  font-size: 1.45rem;
+  font-weight: 500;
+  margin: 0 2.4rem 0 0;
+  color: var(--light-color-white);
   position: relative;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active,
+.navbar .active-link {
+  color: var(--black);
+}
+
+.navbar a::before {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: var(--purple);
+  position: absolute;
+  left: 0;
+  bottom: -0.6rem;
+  transition: width 0.2s ease;
+}
+
+.navbar a:hover::before,
+.navbar a.active::before,
+.navbar .active-link::before {
+  width: 100%;
 }
 
 #buttons {
@@ -51,35 +78,8 @@
   cursor: pointer;
 }
 
-.navbar a::before {
-  content: "";
-  height: 3px;
-  width: 0;
-  background: var(--purple);
-  position: absolute;
-  left: 0;
-  bottom: -1.2rem;
-  transition: 0.4s ease-out;
-}
-
-.navbar a:hover::before {
-  width: 100%;
-}
-
-.navbar .active-link::before,
-.navbar a.active::before {
-  content: "";
-  height: 3px;
-  width: 100%;
-  background: var(--secondary);
-  position: absolute;
-  left: 0;
-  bottom: -1.2rem;
-  transition: 0.4s ease-out;
-}
-
 body.light #darkMode {
-  background: #343d5b;
+  background: #e2e8f0;
   border-radius: 100px;
   border: none;
   position: relative;
@@ -90,7 +90,6 @@ body.light #darkMode {
   margin-top: 0.1rem;
   margin-bottom: 0.5rem;
 }
-
 body.light #darkMode::after {
   content: "";
   display: block;

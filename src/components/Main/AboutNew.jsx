@@ -11,8 +11,6 @@ import { FormattedMessage } from 'react-intl';
 
 /* Img */
 import imgabout from '../../img/Ashish.jpg';
-const img = require.context('../../img', true);
-console.log(process.env);
 
 const About = () => {
     function readMore() {
@@ -51,7 +49,7 @@ const About = () => {
               <p>
                 <FormattedMessage
                   id='about-info-1'
-                  defaultMessage="A seasoned senior software engineer with 9+ years of software engineering expertise, spanning diverse domains such as Enginering Ads, Engineering Cloud Services. My journey has been a blend of leadership and a passion for problem solving."
+                  defaultMessage="A seasoned senior software engineer with 10+ years of experience architecting AI-powered solutions and cloud platforms (Azure, AWS). Trusted leader known for mentoring teams, driving technical innovation, and delivering scalable, business-impacting systems."
                 />
               </p>
 
@@ -79,8 +77,7 @@ const About = () => {
                 <p>
                   <FormattedMessage
                     id='about-info-4'
-                    defaultMessage="⏩ Fast-Paced Environments
-                    I thrive in dynamic settings. My experience at both Microsoft and Amazon has honed my ability to stay agile, adapt to evolving technologies, and deliver results under tight deadlines. The adrenaline rush of a fast-paced team fuels my creativity."
+                    defaultMessage="I thrive in dynamic settings. My experience at Kargo, Microsoft, and Amazon has honed my ability to stay agile, adapt to evolving technologies, and deliver results under tight deadlines."
                   />
                 </p>
               </div>
