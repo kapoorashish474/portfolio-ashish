@@ -40,6 +40,12 @@ export const LINKS = {
   credly: 'https://www.credly.com/badges/60105125-7096-4ed6-b2b0-94b310672b39/linked_in_profile',
 };
 
+// "Who's watching?" choices shown before the intro.
+export const VIEWER_PROFILES = [
+  { id: 'recruiter', name: 'Recruiter', color: '#E50914', shade: '#8A0610' },
+  { id: 'hiring-manager', name: 'Hiring Manager', color: '#1F6FEB', shade: '#0B3A86' },
+];
+
 export const NAV = [
   { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
