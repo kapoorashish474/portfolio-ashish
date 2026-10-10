@@ -5,7 +5,7 @@ import { STATS } from '../data/profile';
 const Stats = () => (
   <section className="relative w-full bg-[#050505] text-white py-16 px-6 md:px-12 border-y border-white/5 select-none">
     <div className="max-w-7xl mx-auto">
-      <div className="text-xs font-mono uppercase tracking-widest text-red-500 font-bold mb-8">Top Numbers This Season</div>
+      <div className="text-xs font-mono uppercase tracking-widest text-red-500 font-bold mb-8">Top Numbers</div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
         {STATS.map((s, i) => (
           <motion.div

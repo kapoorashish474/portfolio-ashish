@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PROJECTS } from '../data/profile';
+import { SectionBadge } from './ui';
+import { episodeCode } from './episodes';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,8 +19,6 @@ const getGridPos = (index, count) => {
 };
 const ROWS = PROJECTS.length <= 8 ? Math.ceil(([0, 1, 2, 3, 5, 6, 7, 8][PROJECTS.length - 1] + 1) / COLS) : Math.ceil(PROJECTS.length / COLS);
 
-const episode = (i) => `S01 E${String(i + 1).padStart(2, '0')}`;
-
 const ProjectCard = ({ project, index, compact = false }) => (
   <a
     href={project.link}
@@ -30,7 +30,7 @@ const ProjectCard = ({ project, index, compact = false }) => (
   >
     <div className="flex items-center justify-between">
       <span className="text-[10px] font-mono font-bold tracking-widest uppercase text-red-500 bg-red-600/10 px-2.5 py-1 rounded border border-red-600/20">
-        {episode(index)}
+        {episodeCode(index)}
       </span>
       <div className="flex items-center gap-2">
         {project.badge && <span className="text-xs font-mono text-red-400 font-bold uppercase">{project.badge}</span>}
@@ -169,7 +169,9 @@ const Projects = () => {
       className="bg-[#0b0b0b] min-h-[100svh] md:min-h-[170vh] relative overflow-x-clip text-white w-full flex items-center justify-center py-24 md:py-40 select-none"
     >
       <div className="absolute top-10 left-0 w-full flex flex-col items-center pointer-events-none z-0">
-        <span className="text-xs font-mono uppercase tracking-widest text-red-500 font-bold mb-2">Episode 05 | Projects</span>
+        <div className="mb-2">
+          <SectionBadge season={5} label="PROJECTS" />
+        </div>
         <h2 className="font-display text-[18vw] md:text-[20vw] text-white/[0.03] leading-none whitespace-nowrap uppercase">ORIGINALS</h2>
       </div>
 

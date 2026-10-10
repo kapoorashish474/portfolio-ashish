@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { EXPERTISE } from '../data/profile';
 import { SpotlightCard, SectionBadge, SectionTitle } from './ui';
+import { episodeCode } from './episodes';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,13 +36,13 @@ const Expertise = () => {
   }, []);
 
   return (
-    <section id="expertise" ref={sectionRef} className="relative w-full bg-[#050505] text-white py-24 px-6 md:px-12 select-none">
+    <section id="expertise" ref={sectionRef} className="relative w-full bg-[#050505] text-white py-24 px-6 md:px-12 select-none overflow-x-clip">
       <div className="absolute top-1/3 left-1/4 w-[450px] h-[450px] bg-red-600/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto w-full space-y-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
           <div className="space-y-4 max-w-xl">
-            <SectionBadge episode="EPISODE 03" label="EXPERTISE" />
+            <SectionBadge season={3} label="EXPERTISE" />
             <SectionTitle top="DIRECTOR'S CUT" accent="WHAT I DO BEST." />
           </div>
           <p className="text-white/60 text-xs md:text-sm font-light leading-relaxed max-w-xs">
@@ -63,7 +64,7 @@ const Expertise = () => {
                 <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-red-500 px-2.5 py-0.5 rounded bg-red-600/10 border border-red-600/25">
                   {item.tag}
                 </span>
-                <span className="text-2xl md:text-3xl font-mono font-black text-white/20">{String(index + 1).padStart(2, '0')}</span>
+                <span className="text-2xl md:text-3xl font-mono font-black text-white/20">{episodeCode(index)}</span>
               </div>
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center my-auto relative z-10">
                 <h3 className="lg:col-span-5 text-2xl md:text-3xl font-black text-white tracking-tight leading-snug group-hover:text-red-500 transition-colors duration-300">

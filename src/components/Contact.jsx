@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { LINKS, PROFILE } from '../data/profile';
+import { LINKS } from '../data/profile';
+import { SectionBadge } from './ui';
 
 const CHANNELS = [
   { label: 'Email', value: LINKS.email, href: `mailto:${LINKS.email}` },
@@ -31,12 +32,8 @@ const Contact = () => {
         >
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent opacity-90" />
 
-          <div className="flex items-center justify-between mb-12">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-red-600/10 border border-red-600/30 text-xs font-mono uppercase tracking-widest text-red-500">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-600 animate-ping" />
-              <span>EPISODE 06 // GET IN TOUCH</span>
-            </div>
-            <span className="text-xs font-mono text-white/40 tracking-wider hidden md:block">{PROFILE.location.toUpperCase()}</span>
+          <div className="mb-12">
+            <SectionBadge season={6} label="GET IN TOUCH" />
           </div>
 
           <h3 className="text-4xl md:text-6xl font-black tracking-tighter leading-[1.05] mb-4">

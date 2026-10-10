@@ -2,10 +2,12 @@ import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SKILLS } from '../data/profile';
+import { SectionBadge } from './ui';
+import { episodeCode, pad } from './episodes';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const total = String(SKILLS.length).padStart(2, '0');
+const total = pad(SKILLS.length);
 
 // Desktop: pinned section where scrolling rotates the cards along an arc.
 // Mobile: horizontal snap carousel.
@@ -102,18 +104,18 @@ const Skills = () => {
       </div>
 
       <div className="absolute top-10 left-0 w-full text-center z-20 pointer-events-none">
-        <span className="text-xs font-mono uppercase tracking-widest text-red-500 font-bold">Episode 04 | Skills</span>
+        <SectionBadge season={4} label="SKILLS" />
       </div>
 
       <div
-        className="relative w-full h-full flex md:items-center md:justify-center z-10 md:[transform-style:preserve-3d] overflow-x-auto overflow-y-hidden md:overflow-visible snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden items-center px-[10vw] md:px-0 gap-4 md:gap-0 touch-pan-x"
+        className="relative w-full h-full flex md:items-center md:justify-center z-10 md:[transform-style:preserve-3d] md:pointer-events-none overflow-x-auto overflow-y-hidden md:overflow-visible snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden items-center px-[10vw] md:px-0 gap-4 md:gap-0 touch-pan-x"
         onScroll={handleScroll}
       >
         {SKILLS.map((category, i) => (
           <div
             key={category.title}
             ref={(el) => (cardsRef.current[i] = el)}
-            className="md:absolute relative shrink-0 snap-center w-[82vw] sm:w-[360px] md:w-[440px] h-[460px] md:h-[540px] rounded-[32px] p-8 md:p-10 bg-[#141414]/95 backdrop-blur-2xl border border-white/15 flex flex-col justify-between overflow-hidden group shadow-[0_30px_60px_rgba(0,0,0,0.9)] hover:border-red-600/80 transition-colors duration-500"
+            className="md:absolute md:pointer-events-auto relative shrink-0 snap-center w-[82vw] sm:w-[360px] md:w-[440px] h-[460px] md:h-[540px] rounded-[32px] p-8 md:p-10 bg-[#141414]/95 backdrop-blur-2xl border border-white/15 flex flex-col justify-between overflow-hidden group shadow-[0_30px_60px_rgba(0,0,0,0.9)] hover:border-red-600/80 transition-colors duration-500"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-red-600/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-20" />
             <div className="flex items-center justify-between relative z-10">
@@ -121,7 +123,7 @@ const Skills = () => {
                 {category.tag}
               </span>
               <span className="text-xs font-mono text-white/40">
-                [ {String(i + 1).padStart(2, '0')} / {total} ]
+                [ {episodeCode(i)} / E{total} ]
               </span>
             </div>
             <div className="space-y-4 relative z-10 my-auto">

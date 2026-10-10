@@ -15,7 +15,7 @@ export const PROFILE = {
   headline: 'Staff-Scope Engineer · AI & Cloud Platforms',
   years: '11',
   location: 'New York, NY',
-  seasons: '2014 - 2026',
+  period: '2014 – Present',
   photo,
   pitch:
     'Building high-scale backend and cloud platforms at AWS and Microsoft. Now leading six engineers at Kargo shipping LLM-driven creative generation.',
@@ -83,11 +83,10 @@ export const RECOGNITION = [
   { title: 'Award-Winning Android App', detail: 'NYC Parking Ticket Pay or Dispute · 4.7/5 on Google Play' },
 ];
 
-// Ordered newest first; `season` counts up from the first role.
+// Ordered newest first; each role is one episode of Season 02 (Experience).
 export const EXPERIENCE = [
   {
     id: 'kargo',
-    season: 5,
     company: 'Kargo',
     role: 'Senior Software Development Engineer',
     period: 'Aug 2025 - Present',
@@ -95,7 +94,7 @@ export const EXPERIENCE = [
     logo: kargoLogo,
     synopsis:
       'Led team of six engineers building AI-powered creative automation platform, architecting scalable systems from design through production.',
-    episodes: [
+    highlights: [
       'Implemented LLM-driven content synthesis pipeline enabling dynamic ad generation while maintaining quality standards and reducing manual content creation time.',
       'Designed Snowflake-based analytics infrastructure for feature importance analysis, enabling data-driven product decisions and accelerating iteration cycles.',
       'Led cross-domain authentication initiative using Okta to unify multiple systems into seamless single sign-on architecture, improving user experience and reducing security surface area.',
@@ -107,14 +106,13 @@ export const EXPERIENCE = [
   },
   {
     id: 'microsoft',
-    season: 4,
     company: 'Microsoft',
     role: 'Senior Software Development Engineer',
     period: 'Jun 2022 - Jul 2025',
     location: 'NYC, USA',
     logo: microsoftLogo,
     synopsis: 'Led team of four engineers through major product initiatives, mentoring one to Senior Engineer promotion.',
-    episodes: [
+    highlights: [
       'Architected large-scale data pipeline using Azure Functions to process data and feed it into Data Explorer, integrated with ML-powered anomaly detection, serving analytics to 100+ enterprise partners.',
       'Built intelligent partner onboarding automation leveraging predictive analytics to recommend optimal configurations, reducing onboarding time by 30% and increasing partner activations by 20%.',
       'Developed machine learning forecasting model to predict partner demand patterns, improving inventory planning accuracy and optimizing operational resource allocation.',
@@ -125,7 +123,6 @@ export const EXPERIENCE = [
   },
   {
     id: 'aws',
-    season: 3,
     company: 'Amazon Web Services',
     role: 'Software Development Engineer',
     period: 'May 2020 - Jun 2022',
@@ -133,7 +130,7 @@ export const EXPERIENCE = [
     logo: awsLogo,
     synopsis:
       'Shipped high-scale AWS Pricing Calculator serving 1M+ daily requests, supporting cost estimation capabilities across 100+ AWS services.',
-    episodes: [
+    highlights: [
       'Implemented Infrastructure as Code using CloudFormation to automate deployment of Route 53 DNS, S3 storage, and CloudFront distribution services.',
       'Built real-time monitoring system to track calculator performance metrics and automatically alert on service anomalies and outages.',
     ],
@@ -141,14 +138,13 @@ export const EXPERIENCE = [
   },
   {
     id: 'gcom',
-    season: 2,
     company: 'GCOM Software',
     role: 'Software Developer',
     period: 'May 2016 - May 2020',
     location: 'Albany, NY',
     logo: gcomLogo,
     synopsis: 'Delivered end-to-end features across web, desktop, and mobile applications.',
-    episodes: [
+    highlights: [
       'Designed and delivered end-to-end features for ASP.NET MVC and WPF applications, consistently shipping on schedule with high quality standards.',
       'Developed award-winning Android application for NYC Parking Ticket Pay or Dispute with multilingual support, achieving 4.7/5 stars on Google Play Store.',
       'Provided technical guidance to junior engineers through code reviews and architecture discussions, establishing engineering standards and best practices.',
@@ -157,14 +153,13 @@ export const EXPERIENCE = [
   },
   {
     id: 'accenture',
-    season: 1,
     company: 'Accenture',
     role: 'Associate Software Engineer',
     period: 'Jul 2014 - Jul 2015',
     location: 'Mumbai, India',
     logo: accentureLogo,
     synopsis: 'Built insurance domain systems and business intelligence reporting.',
-    episodes: [
+    highlights: [
       'Developed comprehensive insurance service portal supporting policyholders across multiple service channels.',
       'Designed and maintained business intelligence reports using Crystal Reporting, enabling data-driven decision-making across the organization.',
     ],
@@ -197,6 +192,12 @@ export const EXPERTISE = [
 
 export const SKILLS = [
   {
+    title: 'Full-Stack Engineering',
+    tag: 'WEB',
+    desc: 'Customer-facing web apps and APIs, from reusable React components to backend services.',
+    skills: ['React', 'Redux', 'JavaScript', 'Node.js', 'Express.js', 'Python'],
+  },
+  {
     title: 'AI & Agents',
     tag: 'INTELLIGENCE',
     desc: 'LLM content synthesis, agent frameworks, MCP tooling, RAG pipelines, and ML-powered anomaly detection and forecasting.',
@@ -219,12 +220,6 @@ export const SKILLS = [
     tag: 'DATA',
     desc: 'Analytics infrastructure and data pipelines that turn raw events into product and partner insights.',
     skills: ['Snowflake', 'Data Explorer', 'Kusto', 'Cosmos DB', 'MySQL', 'SQL'],
-  },
-  {
-    title: 'Full-Stack Engineering',
-    tag: 'WEB',
-    desc: 'Customer-facing web apps and APIs, from reusable React components to backend services.',
-    skills: ['React', 'Redux', 'JavaScript', 'Node.js', 'Express.js', 'Python'],
   },
   {
     title: 'Platforms & Identity',

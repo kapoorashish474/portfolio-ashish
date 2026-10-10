@@ -1,4 +1,5 @@
 // Shared building blocks used across sections.
+import { pad } from './episodes';
 
 // Card with a red radial highlight that follows the mouse.
 export const SpotlightCard = ({ className = '', size = 400, children, ref, ...rest }) => {
@@ -21,11 +22,11 @@ export const SpotlightCard = ({ className = '', size = 400, children, ref, ...re
   );
 };
 
-// "EPISODE 01 | ABOUT" pill shown above each section title.
-export const SectionBadge = ({ episode, label }) => (
+// "SEASON 01 | ABOUT" pill shown above each section title.
+export const SectionBadge = ({ season, label }) => (
   <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded bg-black/80 backdrop-blur-2xl border border-red-600/40 text-xs font-mono uppercase tracking-widest text-white shadow-2xl">
     <span className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
-    <span className="text-red-500 font-bold">{episode}</span>
+    <span className="text-red-500 font-bold">SEASON {pad(season)}</span>
     <span className="text-white/40">|</span>
     <span>{label}</span>
   </div>

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { PROFILE, LINKS, NAV, RECOGNITION } from '../data/profile';
+import MobileNav from './MobileNav';
 
 const Hero = () => {
   const sectionRef = useRef(null);
@@ -79,8 +80,8 @@ const Hero = () => {
       </div>
 
       {/* Navbar */}
-      <header className="relative z-50 w-full max-w-7xl mx-auto px-6 md:px-12 py-6 flex items-center justify-between">
-        <a href="#home" className="font-display text-3xl text-red-600 tracking-wide drop-shadow-[0_2px_15px_rgba(229,9,20,0.9)]">
+      <header className="relative z-50 w-full max-w-7xl mx-auto px-6 md:px-12 py-6 flex items-center justify-between gap-4">
+        <a href="#home" className="font-display text-2xl sm:text-3xl whitespace-nowrap text-red-600 tracking-wide drop-shadow-[0_2px_15px_rgba(229,9,20,0.9)]">
           {PROFILE.firstName} {PROFILE.lastName}
         </a>
         <nav className="hidden lg:flex items-center gap-8 text-xs font-mono uppercase tracking-widest text-white/80">
@@ -90,12 +91,15 @@ const Hero = () => {
             </a>
           ))}
         </nav>
-        <a
-          href="#contact"
-          className="px-5 py-2 rounded bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-[0_0_20px_rgba(229,9,20,0.6)] hover:scale-105 active:scale-95"
-        >
-          Hire Me
-        </a>
+        <div className="flex items-center gap-3">
+          <a
+            href="#contact"
+            className="px-5 py-2 rounded bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-widest whitespace-nowrap transition-all duration-300 shadow-[0_0_20px_rgba(229,9,20,0.6)] hover:scale-105 active:scale-95"
+          >
+            Hire Me
+          </a>
+          <MobileNav />
+        </div>
       </header>
 
       <div ref={contentRef} className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 flex-1 flex flex-col justify-between pb-10 gap-10">
@@ -105,7 +109,7 @@ const Hero = () => {
             <span className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
             <span className="text-red-500 font-bold tracking-wider">ENGINEERING SERIES</span>
             <span className="text-white/40">|</span>
-            <span className="text-white/80">SEASONS {PROFILE.seasons}</span>
+            <span className="text-white/80">{PROFILE.period}</span>
           </div>
           <div className="hidden md:flex items-center gap-2 text-xs font-mono text-white/50 tracking-wider">
             <span className="px-2 py-0.5 border border-white/20 rounded bg-black/40">{PROFILE.years} YEARS</span>
