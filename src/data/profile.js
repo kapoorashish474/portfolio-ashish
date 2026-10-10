@@ -15,7 +15,7 @@ export const PROFILE = {
   headline: 'Staff-Scope Engineer · AI & Cloud Platforms',
   years: '11',
   location: 'New York, NY',
-  seasons: '2014 -2026',
+  seasons: '2014 - 2026',
   photo,
   pitch:
     'Building high-scale backend and cloud platforms at AWS and Microsoft. Now leading six engineers at Kargo shipping LLM-driven creative generation.',
@@ -62,12 +62,12 @@ export const EDUCATION = [
   {
     degree: 'M.S. in Information Technology & Management',
     school: 'The University of Texas at Dallas',
-    period: '2015 -2017',
+    period: '2015 - 2017',
   },
   {
     degree: 'B.S. in Information Technology',
     school: 'University of Mumbai',
-    period: '2010 -2014',
+    period: '2010 - 2014',
   },
 ];
 
@@ -84,7 +84,7 @@ export const EXPERIENCE = [
     season: 5,
     company: 'Kargo',
     role: 'Senior Software Development Engineer',
-    period: 'Aug 2025 -Present',
+    period: 'Aug 2025 - Present',
     location: 'NYC, USA',
     logo: kargoLogo,
     synopsis:
@@ -104,7 +104,7 @@ export const EXPERIENCE = [
     season: 4,
     company: 'Microsoft',
     role: 'Senior Software Development Engineer',
-    period: 'Jun 2022 -Jul 2025',
+    period: 'Jun 2022 - Jul 2025',
     location: 'NYC, USA',
     logo: microsoftLogo,
     synopsis: 'Led team of four engineers through major product initiatives, mentoring one to Senior Engineer promotion.',
@@ -122,7 +122,7 @@ export const EXPERIENCE = [
     season: 3,
     company: 'Amazon Web Services',
     role: 'Software Development Engineer',
-    period: 'May 2020 -Jun 2022',
+    period: 'May 2020 - Jun 2022',
     location: 'Seattle, USA',
     logo: awsLogo,
     synopsis:
@@ -138,7 +138,7 @@ export const EXPERIENCE = [
     season: 2,
     company: 'GCOM Software',
     role: 'Software Developer',
-    period: 'May 2016 -May 2020',
+    period: 'May 2016 - May 2020',
     location: 'Albany, NY',
     logo: gcomLogo,
     synopsis: 'Delivered end-to-end features across web, desktop, and mobile applications.',
@@ -154,7 +154,7 @@ export const EXPERIENCE = [
     season: 1,
     company: 'Accenture',
     role: 'Associate Software Engineer',
-    period: 'Jul 2014 -Jul 2015',
+    period: 'Jul 2014 - Jul 2015',
     location: 'Mumbai, India',
     logo: accentureLogo,
     synopsis: 'Built insurance domain systems and business intelligence reporting.',
