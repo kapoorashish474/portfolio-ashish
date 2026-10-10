@@ -46,32 +46,24 @@ const Contact = () => {
             Open to staff-level engineering and leadership roles in AI and cloud platforms. The fastest way to reach me is email.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {CHANNELS.map((c) => (
               <a
                 key={c.label}
                 href={c.href}
                 target={c.href.startsWith('mailto') ? undefined : '_blank'}
                 rel="noopener noreferrer"
-                className="group p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-red-600 hover:bg-red-600/10 transition-all duration-300"
+                aria-label={`${c.label}: ${c.value}`}
+                className="group p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-red-600 hover:bg-red-600/10 transition-all duration-300 flex items-center justify-between gap-3"
               >
-                <div className="text-xs font-mono uppercase tracking-widest text-red-500 font-bold mb-2">{c.label}</div>
-                <div className="text-sm md:text-base text-white break-all flex items-center justify-between gap-3">
-                  {c.value}
-                  <svg className="w-4 h-4 shrink-0 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </div>
+                {/* Only the channel name is shown; the address stays in the link itself. */}
+                <span className="text-xs font-mono uppercase tracking-widest text-red-500 font-bold">{c.label}</span>
+                <svg className="w-4 h-4 shrink-0 text-white transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
               </a>
             ))}
           </div>
-
-          <a
-            href={`mailto:${LINKS.email}`}
-            className="inline-flex px-8 py-3.5 rounded bg-red-600 text-white font-bold uppercase tracking-widest text-xs items-center gap-3 hover:bg-red-700 transition-all duration-300 shadow-[0_0_20px_rgba(229,9,20,0.6)] hover:scale-105"
-          >
-            Send Email
-          </a>
         </motion.div>
       </div>
     </section>

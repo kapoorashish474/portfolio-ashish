@@ -80,9 +80,8 @@ const Hero = () => {
 
       {/* Navbar */}
       <header className="relative z-50 w-full max-w-7xl mx-auto px-6 md:px-12 py-6 flex items-center justify-between">
-        <a href="#home" className="font-display text-3xl text-red-600 tracking-wide flex items-center gap-2 drop-shadow-[0_2px_15px_rgba(229,9,20,0.9)]">
-          {PROFILE.firstName}
-          <span className="w-1.5 h-1.5 rounded-full bg-white inline-block" />
+        <a href="#home" className="font-display text-3xl text-red-600 tracking-wide drop-shadow-[0_2px_15px_rgba(229,9,20,0.9)]">
+          {PROFILE.firstName} {PROFILE.lastName}
         </a>
         <nav className="hidden lg:flex items-center gap-8 text-xs font-mono uppercase tracking-widest text-white/80">
           {NAV.map((item) => (
